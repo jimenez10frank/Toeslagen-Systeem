@@ -1,0 +1,325 @@
+header {
+    width: 100%;
+}
+
+
+header .logo {
+    position: relative;
+    float: left;
+    left: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .logo img {
+    height: 15vh;
+}
+
+/* // link knoppen  */
+header .hypers {
+    position: relative;
+    float: right;
+    right: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vh;
+    height: 15vh;
+}
+
+header .hypers i button {
+    border: none;
+    font-weight: bold;
+    color: var(--wit);
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    background: var(--licht-blauw);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    transition: 1s ease-in-out;
+    cursor: pointer;
+}
+
+
+/*               FORM CONTAINER                 */
+
+.formDiv .title {
+    font-size: 3vh;
+    font-weight: bold;
+    color: var(--blauw);
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    transition: 2s ease-in-out;
+}
+
+
+.formDiv {
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    min-width: 45vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:var(--wit);
+    border-radius: 2vh;
+    gap: 7vh;
+    padding: 1.5vh;
+    transition: 1s ease-in-out;
+    margin-bottom: 20vh;
+    overflow: auto;
+}
+
+/* form zelf */
+.formDiv form {
+    min-height: 60vh;
+    min-width: 15vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5vh;
+    padding: 5vh;
+    border-width: 1vh;
+}
+
+.formDiv .lft {
+    width: 20vw;
+    margin-bottom: 5vh;
+    display: flex;
+    flex-direction: column;
+    padding-left: 4vh;
+    transition: 0.4s ease-in-out;
+}
+
+/* Tips container  */
+
+/* verborgen tips op klenere schermen, pas worden ze weergegeven en linker container van het form gesloten */ 
+.hidden {
+    display: none;
+}
+
+.tips {
+    margin-top: 10vh;
+    width: 22vw;
+    background-color: var(--zwart);
+    color: var(--grijs);
+    padding: 2vh;
+    border-radius: 1vh;
+    height: fit-content;
+}
+
+.tips article ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2vh;
+}
+
+.tips h1 {
+    margin: 3vh;
+    color: var(--licht-blauw);
+}
+
+/* ---------------------------------------- */
+
+
+
+.formDiv .lft img:hover {
+    transform: scale(1.2);
+}
+
+/*                  form inputs                       */
+.formDiv form .naam input,
+.wachtwoord input,
+.achternaam input,
+.email input,
+.nummer input {
+    width: 35vh;
+    height: 2vh;
+    background-color: var(--zwart);
+    color: var(--wit);
+    border-radius: 1vh;
+    border: none;
+    font-weight: 700;
+    font-size: 1.7vh;
+    padding: 1.5vh;
+    transition: 0.5s ease-in-out;
+    font-size: 1.8vh;
+
+    input:focus {
+        background-color: var(--wit);
+        color: var(--zwart);
+    }
+}
+
+
+ /* # Geboortedatum wijkt af van 'gewone' inputs # */
+.formDiv form .geboorteDatum input {
+    width: 35vh;
+    height: 2vh;
+    background-color: var(--zwart);
+    text-align: center;
+    color: var(--wit);
+    border-radius: 1vh;
+    border: none;
+    font-weight: 700;
+    font-size: 1.7vh;
+    padding: 1.5vh;
+    transition: 0.5s ease-in-out;
+    font-size: 1.8vh;
+
+    input:focus {
+        background-color: var(--wit);
+        color: var(--zwart);
+    }
+
+}
+
+/* // Geslacht is een select element ! // */
+.formDiv form .geslacht select {
+    width: 38vh;
+    height: 5vh;
+    background-color: var(--zwart);
+    text-align: center;
+    color: var(--wit);
+    border-radius: 1vh;
+    border: none;
+    font-weight: 700;
+    font-size: 1.7vh;
+    transition: 0.5s ease-in-out;
+    font-size: 1.8vh;
+
+
+
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.formDiv form .naam,
+.achternaam,
+.email,
+.wachtwoord,
+.nummer,
+.geboorteDatum,
+.geslacht {
+    display: flex;
+    align-items: center;
+    gap: 1vh;
+}
+
+.formDiv form .naam img,
+.achternaam img,
+.email img,
+.wachtwoord img,
+.nummer img,
+.geboorteDatum img,
+.geslacht img {
+    height: 4vh;
+}
+
+.formDiv form .naam input::placeholder,
+.wachtwoord input::placeholder,
+.achternaam input::placeholder,
+.email input::placeholder,
+.wachtwoord input::placeholder,
+.nummer input::placeholder {
+    text-align: center;
+}
+
+.formDiv .knopje {
+    width: 35vh;
+}
+
+.formDiv .knopje input {
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--wit);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    width: 100%;
+    height: 50px;
+    margin-left: 8%;
+    border-radius: 5px;
+    background: var(--gradient-donker-licht);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    transition: 1s ease-in-out;
+}
+
+.formDiv .knopje input:hover {
+    transition: 1s ease-in-out;
+    cursor: pointer;
+    background: var(--gradient-licht-donker);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+
+.formDiv form input:focus {
+    background-color: var(--wit);
+    color: var(--zwart);
+}
+
+
+
+
+
+/* een beetje responsive on top :-) */
+@media screen and (max-width: 998px) {
+    .hidden {
+        display: block;
+        position: static;
+        margin-top: -10vw;
+        width: 100%;
+    }
+
+    header .hypers{
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+    }
+
+    .formS .title {
+        font-size: 2.5vh !important;
+    }
+
+    .formDiv {
+        flex-direction: column;
+    }
+
+    .formDiv input {
+        width: 45vw !important;
+    }
+
+    .formDiv form .geslacht select {
+        width: 48vw !important;
+    }
+
+    .formDiv .lft {
+        display: none;
+    }
+
+    .formDiv .title {
+        font-size: 3vh;
+    }
+
+    .formDiv .knopje {
+        width: 45vw !important;
+
+        input {
+            height: 5vh;
+        }
+    }
+
+    .overzicht,
+    .inlogOverzicht {
+        top: 0;
+    }
+}
