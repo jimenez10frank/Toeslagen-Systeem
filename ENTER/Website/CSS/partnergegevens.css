@@ -1,0 +1,131 @@
+/* formulier styling voor partnergegevens */
+.partnerGegevens {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 70px;
+    padding: 20px;
+    border: 1px solid var(--wit);
+    border-radius: 50px;
+    background-color: var(--wit);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+/* dit is de container zelf voor zowel partner en tips container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    margin: 40px auto;
+    max-width: 1000px;
+}
+
+/* container vor tips styling */
+.tipsContainer {
+    flex: 1;
+    max-width: 50%;
+    margin: auto;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/* icoontje voor naam achternaam */
+.fa-user {
+    font-size: 20px; 
+    color: var(--blauw); 
+    margin-right: 5%; 
+}
+/* icoontje voor geboorteland */
+.fa-flag {
+    font-size: 20px; 
+    color: var(--blauw); 
+    margin-right: 5%; 
+}
+/* icoontje voor je bsn */
+.fa-id-card {
+    font-size: 20px; 
+    color: var(--blauw); 
+    margin-right: 5%; 
+}
+/* icoontje voor geboortedatum */
+
+.fa-cake-candles {
+    font-size: 20px; 
+    color: var(--blauw); 
+    margin-right: 5%; 
+}
+/* icoontje voor geboorteland */
+.fa-globe {
+    font-size: 20px; 
+    color: var(--blauw); 
+    margin-right: 5%; 
+}
+
+
+
+
+input {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid white(0, 0, 0);
+    background-color: var(--zwart);
+    color: white;;
+}
+input::placeholder {
+    color: white;
+}
+/* effect */
+input:hover {
+    color: var(--zwart);
+    background-color: var(--wit);
+    transition: 0.3s ease-in-out; /* Smooth transition effect */
+}
+input:hover::placeholder {
+    color: var(--zwart);
+    transition: 0.3s ease-in-out; /* Smooth transition effect */
+}
+
+
+
+input[type="date"] {
+    margin: 10px;
+    padding: 10px;
+    width: 185px;
+    border-radius: 5px;
+    border: 1px solid white(0, 0, 0);
+    background-color: black(0, 0, 0);
+}
+/* submit button kan nog verandert worden qua styling */
+#submit {
+    background-color: var(--blauw);
+    color: var(--wit);
+    border: 10px;
+    padding: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#submit:hover {
+    background-color: var(--navy-blauw);
+}
+/* rijksoverhijd logo met submit button */
+.submitlogo {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+.logo {
+    width: 50px 70px;
+    height: 50px;
+    margin: 10px 10px;
+}
+.titels {
+    color: var(--blauw);
+}

@@ -1,0 +1,66 @@
+body {
+    background-color: #f0f4fc;
+}
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    width: 170vh;
+    margin-left: 20vh;
+}
+.leftSide, .rightSide {
+    display: flex;
+}
+
+/* linker gedeelte van de pagina */
+.leftSide {
+    width: 100vh;
+    flex-direction: column;
+    height: 170vh;
+}
+.leftBox1, .leftBox2, .leftBox3, .leftBox4, .leftBox5 {
+    background-color: white;
+    padding: 30px;
+    padding-top: 8px;
+    margin-bottom: 3.5vh;
+}
+
+/* rechter gedeelte van de pagina */
+.rightSide {
+    height: 100%;
+    margin-top: 85px;
+}
+.rightBox1 {
+    background-color: white;
+    width: 52vh;
+    padding-left: 20px;
+}
+.kopje {
+    color: #033d5a;
+    padding-left: 5vh;
+}
+
+/* styling voor tekst binnen leftBox1-5 */
+h3.left{
+    color: #033d5a;
+}
+.lijn {
+    border-top: 1px rgb(180, 178, 178) solid;
+    padding-bottom: 10px;
+}
+p {
+    padding-bottom: 5px;
+}
+.aLink {
+    color: rgb(43, 43, 163);
+    transition: color 0.5s ease;
+    text-decoration: none;
+    padding: 10px;
+}
+.aLink:hover {
+    color: rgb(3, 3, 43);
+}
+
+/* styling voor tekst binnen rightBox */
+span {
+    font-size: 19px;
+}

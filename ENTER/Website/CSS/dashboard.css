@@ -1,0 +1,163 @@
+/* dashboard container  */
+.dContainer {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+}
+
+
+/* content wrapper  */
+.dWrapper {
+    border-radius: 2vh;
+    margin: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    padding: 3vh;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+
+/* titel  */
+.dHeader {
+    margin: 5vh 0 7vh 0;
+    padding: 3vh;
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    background: var(--gradient-donker-licht);
+    color: var(--wit);
+    border-radius: 2vh;
+    box-shadow: rgba(0, 0, 0, 0.16) 3px 3px 4px;
+}
+
+
+/* navigaties */
+.dContent {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 840px;
+    height: fit-content;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* containers  */
+.dControle,
+.dMeldingen {
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    width: 400px;
+    padding: 1vh;
+
+    a {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        text-decoration: none;
+        gap: 0vh;
+        font-weight: bold;
+        background-color: var(--blauw);
+        color: var(--wit);
+        border-radius: 1vh;
+        padding: 1vh;
+        transition: .3s ease;
+
+        span {
+            transition: .5s ease;
+        }
+
+        &:hover {
+            background-color: var(--licht-blauw);
+
+            .naar {
+                transform: translateX(50%);
+            }
+        }
+    }
+}
+
+
+/* // gegevens */
+
+.dGegevens {
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 400px;
+    height: fit-content;
+    padding: 1vh;
+    border-radius: 1vh;
+    background: var(--gradient-donker-licht);
+    color: var(--off-wit);
+    .sGrijs{
+        margin: 2vh 0 0 2vh;
+        color: var(--grijs);
+        text-decoration: underline;
+        font-style: italic;
+    }
+    a {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        text-decoration: none;
+        gap: 0vh;
+        font-weight: bold;
+        background-color: var(--wit);
+        color: var(--blauw);
+        border-radius: 1vh;
+        padding: 1vh 0;
+        transition: .3s ease;
+
+        span {
+            transition: .0s ease;
+        }
+
+        &:hover {
+            background-color: var(--licht-blauw);
+            color: (var(--wit));
+
+            .naar {
+                transform: translateX(50%);
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+    .dWrapper {
+        width: 100%;
+        margin: 0;
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .dContent {
+        width: 100%;
+        gap: 3vh;
+    }
+
+    .dControle,
+    .dGegevens {
+        width: 100%;
+        padding: 0;
+        border-radius: 0;
+
+        a {
+            border-radius: 0;
+        }
+    }
+}
