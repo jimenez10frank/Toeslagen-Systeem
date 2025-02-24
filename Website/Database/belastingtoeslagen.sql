@@ -62,5 +62,16 @@ CREATE TABLE `adres` (
     FOREIGN KEY (`gebruiker_id`) REFERENCES `gebruiker` (`id`)
 );
 
+-- this is a foreign key to the user admin table and aanvraag table so dont forget to put it
+CREATE TABLE `partner` (
+  `id` int(11) NOT NULL,
+  `naam` varchar(255) NOT NULL,
+  `achternaam` varchar(255) NOT NULL,
+  `geboortedatum` date NOT NULL,
+  `geboorteland` varchar(255) NOT NULL,
+  `bsnnummer` int(255) NOT NULL,
+  `nationaliteit` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 SELECT * FROM gebruiker;
 SELECT * FROM aanvraag;

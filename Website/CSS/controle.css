@@ -1,25 +1,3 @@
-/* Kleur palet  */
-:root {
-    --zwart: #252525;
-    --wit: #FFFFFF;
-    --off-wit: #EEF2FF;
-    --donker-grijs: #777676;
-    --grijs: #dadada;
-    --lichtste-blauw: #d9e1fd;
-    --licht-blauw: #0984e3;
-    --navy-blauw: #01689b;
-    --blauw: #033d5a;
-    --donker-blauw: #151A2D;
-    --fout: #F74850;
-    --geel: #FEE900;
-    --gradient-donker-licht: linear-gradient(135deg, #033d5a, #0984e3);
-    --gradient-licht-donker: linear-gradient(135deg, #0984e3, #033d5a);
-    --background-gradient: linear-gradient(120deg, rgba(255, 255, 255), rgba(255, 240, 25, 0.8));
-    --background-licht-gradient: linear-gradient(120deg, rgba(255, 255, 255), rgba(255, 240, 25, 0.6));
-    --background-blue: rgba(255, 255, 255, 0.8);
-}
-
-
 /* achtergrond */
 .bg {
     height: 100vh;
@@ -38,8 +16,7 @@
 .tContainer {
     width: 100%;
     height: 100vh;
-    /* transition: all 2s ease-in-out; */
-    /* background-color: var(--wit); */
+    transition: all 2s ease-in-out;
 }
 
 
@@ -53,14 +30,35 @@
 
 
 .card {
-    width: 1200px;
-    height: 800px;
+    width: 60vw;
+    height: 80vh;
     padding: 0;
     border-radius: 10px;
     background-color: var(--donker-blauw);
     user-select: none;
     overflow-y: auto;
 }
+
+
+/* ----- SCROLLBAR styling ------ */
+.card::-webkit-scrollbar {
+    width: 0.6vw;
+    opacity: 0.1;
+}
+
+/* knop */
+.card::-webkit-scrollbar-thumb {
+    height: 33vh;
+    background-color: #f7dc0a !important;
+    border-radius: 0;
+}
+
+
+/* knop houder */
+.card::-webkit-scrollbar-track {
+    background-color: #864dfb;
+}
+
 
 .swiper-slide {
     display: flex;
@@ -89,15 +87,15 @@
     align-self: stretch;
 }
 
-.curv{
+.curv {
     margin: 2vh 0 0 2vh;
     color: var(--grijs);
     font-style: italic;
 }
 
-.cSpec{
+.cSpec {
     padding: 4vh;
-    font-size:1.8vh !important;
+    font-size: 1.8vh !important;
     text-decoration: none;
 }
 
@@ -192,7 +190,7 @@ input[type="radio"] {
 
 /* Change color when selected */
 input[type="radio"]:checked {
-    background-color: #864dfb; 
+    background-color: #864dfb;
     border: 2px solid #864dfb;
 }
 
@@ -206,7 +204,7 @@ input[type="radio"]:checked::before {
     margin: 2px auto;
 }
 
-#kinderen_aantal{
+#kinderen_aantal {
     opacity: 0;
     transition: 1s ease;
 }
@@ -214,7 +212,7 @@ input[type="radio"]:checked::before {
 
 
 /* // Verzekeringen */
-.tVerzekering select{
+.tVerzekering select {
     transition: 1s ease;
     display: block;
     width: fit-content;
@@ -236,11 +234,11 @@ input[type="radio"]:checked::before {
 
 /* // toeslagen overzicht */
 
-.toeslag-item{
+.toeslag-item {
     margin-top: 10vh;
 }
 
-.toeslag-item:nth-child(1){
+.toeslag-item:nth-child(1) {
     margin-top: 5vh;
 }
 
@@ -253,11 +251,13 @@ input[type="radio"]:checked::before {
 }
  */
 
- .tGoed, .tPass {
+.tGoed,
+.tPass {
     text-decoration: none;
- }
+}
 
- .tGoed button, .tPass button{
+.tGoed button,
+.tPass button {
     display: block;
     width: 240px;
     height: 48px;
@@ -271,61 +271,38 @@ input[type="radio"]:checked::before {
     color: var(--wit);
     border: 0;
     cursor: pointer;
- }
-
-
-
-
-
-
-
-
-
-
-@media screen and (max-width: 1400px){
-    body{
-        overflow-y: auto;
-        overflow-x: hidden;
-    }
-    .card{
-        width: 1000px;
-        height: 800px;
-        border-radius: 0;
-    }
-}
-
-@media screen and (max-width: 1000px){
-    body{
-        overflow-y: auto;
-        overflow-x: hidden;
-    }
-
-    .swiper-button-prev, .swiper-button-next{
-        display: none  !important;
-    }
-    .card{
-        width: 500px;
-        height: fit-content;
-        border-radius: 0;
-    }
 }
 
 
 
-@media screen and (max-width: 500px){
-    .card{
-        width: 500px;
+
+
+
+
+
+
+
+@media screen and (max-width: 1400px) {
+    body {
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .card {
+        width: 100%;
         height: 100%;
         border-radius: 0;
         padding: 0;
         z-index: 1;
     }
 
-    .swiper-button-prev, .swiper-button-next{
-        display: none  !important;
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: none !important;
     }
 
-    .swiper-slide{
+    .swiper-slide {
         padding: 160px 0 260px;
     }
+
 }

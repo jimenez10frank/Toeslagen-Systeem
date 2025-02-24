@@ -36,9 +36,9 @@ document.getElementById('telefoonNummer').addEventListener('input', (e) => {
     // alles verwijderen die geen '+' teken, getal of spatie zijn
     value = value.replace(/[^+\d\s]/g, "");
 
-    // Nederlandse nummer met '+31 6' moet in totaal 13 tekens lang zijn met spaties 
-    if (value.length > 13) {
-        value = value.slice(0, 13); // haal alles weg na 13e teken
+    // Nederlandse nummer met '+31 6' moet in totaal 14 tekens lang zijn met spaties 
+    if (value.length > 14) {
+        value = value.slice(0, 14); // haal alles weg na 14e teken
     }
 
     // om te voorkomen dat mensen andere nummers gebruiken dan Nederlandse

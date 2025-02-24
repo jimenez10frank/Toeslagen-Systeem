@@ -130,8 +130,8 @@ $userDB->pdo->sendAway();
   <div class="dContainer">
     <div class="dWrapper">
       <div class="dHeader">
-        <h2>Welkom op belastingdienst [Username]</h2>
-        <span>[Vandaag is 10 Februari 2025]</span>
+        <h2>Welkom op belastingdienst <?=  ucfirst(strtolower(htmlspecialchars($_SESSION['voornaam']))) ?></h2>
+        <span class="spanStyle"><?=  htmlspecialchars(date("l jS \\ F Y h:i")) . "<br>" ?></span>
       </div>
       <div class="dContent">
         <div class="dControle">

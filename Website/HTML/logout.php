@@ -8,7 +8,7 @@ if (!isset($_SESSION['gebruikerID']) || !isset($_SESSION['logged'])) {
 }
 
 
-// vernietig sessie,  start een nieuwe en verwijs gebruiker naar login pagina  met een feedback
+// vernietig sessie, start een nieuwe en verwijs gebruiker naar login pagina  met een feedback
 session_destroy();
 session_start();
 
